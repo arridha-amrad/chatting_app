@@ -1,8 +1,10 @@
-import './signupPage.css';
-import BgSignup from '../../images/bg.jpg';
-import SignUpForm from '../../features/signup/signupFeatures';
+import "./signupPage.style.css";
+import BgSignup from "../../images/bg.jpg";
+import { useNavigate } from "react-router-dom";
+import SignUpForm from "../../features/signup/SignupFeatures";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   return (
     <section id="signup_page">
       <main className="main">
@@ -11,7 +13,9 @@ const SignUp = () => {
         </div>
         <div className="content">
           <nav className="navbar">
-            <button className="btn_login">Login</button>
+            <button onClick={() => navigate("/login")} className="btn_primary">
+              Login
+            </button>
           </nav>
           <div className="signup_form_container">
             <div className="signup_form">

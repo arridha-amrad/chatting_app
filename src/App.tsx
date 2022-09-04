@@ -1,13 +1,13 @@
-import { Route, Routes } from 'react-router-dom';
-import Home from './pages/home/home';
-import SignUp from './pages/signup/signup';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import { HomePage, LoginPage, SignUpPage } from "./pages/pages.export";
+import "./App.css";
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/signup" element={<SignUp />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/signup" element={<SignUpPage />} />
+      <Route path="/login" element={<LoginPage />} />
     </Routes>
   );
 };

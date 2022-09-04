@@ -1,46 +1,58 @@
-import { FormEvent } from 'react';
-import { Link } from 'react-router-dom';
-import './signupFeatures.css';
+import { PasswordInput, TextInput } from "../../components/components.export";
+import useForm from "../../hooks/useForm";
+import "./signupFeatures.style.css";
+
+interface ISignUpState {
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+}
 
 const SignUpForm = () => {
-  const onSubmit = (e: FormEvent) => {
-    e.preventDefault();
-  };
+  const { onChange, onSubmit, state } = useForm<ISignUpState>({
+    email: "",
+    firstName: "",
+    lastName: "",
+    password: "",
+  });
+
+  const { email, firstName, lastName, password } = state;
 
   return (
     <form onSubmit={onSubmit} className="signup_form">
       <div className="name_container">
-        <div className="item1">
-          <div className="input_wrapper">
-            <label>First Name</label>
-            <input className="text_input" />
-          </div>
+        <div className="first_name_container">
+          <TextInput
+            label="First Name"
+            name="firstName"
+            value={firstName}
+            onChange={onChange}
+          />
         </div>
-        <div className="item2">
-          <div className="input_wrapper">
-            <label>Last Name</label>
-            <input className="text_input" />
-          </div>
-        </div>
-      </div>
-      <div className="input_wrapper">
-        <label>Email Address</label>
-        <input className="text_input" />
-      </div>
-      <div className="input_wrapper">
-        <div className="password_label_container">
-          <label>Password</label>
-          <Link className="link" to="/">
-            Forgot password
-          </Link>
-        </div>
-        <input className="text_input" />
-        <div className="show_password_container">
-          <input className="check_input" type="checkbox" />
-          <label>Show Password</label>
+        <div className="last_name_container">
+          <TextInput
+            label="Last Name"
+            name="lastName"
+            value={lastName}
+            onChange={onChange}
+          />
         </div>
       </div>
-      <button type="submit" className="btn_signup">
+      <TextInput
+        label="Email Address"
+        name="email"
+        value={email}
+        onChange={onChange}
+      />
+      <PasswordInput
+        label="Password"
+        name="password"
+        onChange={onChange}
+        value={password}
+        isWithForgotPassword={true}
+      />
+      <button type="submit" className="btn_primary">
         Sign Up
       </button>
     </form>
