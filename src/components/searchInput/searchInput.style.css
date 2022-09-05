@@ -1,0 +1,26 @@
+.search_input_wrapper {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  background-color: var(--white_v3);
+  border-radius: 0.5rem;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.search_input_wrapper i {
+  font-size: 1.5rem;
+  color: var(--gray);
+  margin-right: 1rem;
+}
+
+.search_input_wrapper input {
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600 !important;
+  font-family: 'Nunito', sans-serif !important;
+  color: var(--gray_v2);
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+}

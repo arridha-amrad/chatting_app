@@ -1,7 +1,7 @@
-import "./loginPage.style.css";
-import BgLogin from "../../images/bg_login.jpg";
-import { LoginForm } from "../../features/features.export";
-import { useNavigate } from "react-router-dom";
+import './loginPage.style.css';
+import BgLogin from '../../images/bg_login.jpg';
+import { LoginForm } from '../../features/features.export';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ const LoginPage = () => {
     <section id="login_page">
       <div className="content">
         <nav>
-          <button onClick={() => navigate("/signup")} className="btn_primary">
+          <button onClick={() => navigate('/signup')} className="btn_primary">
             Sign Up
           </button>
         </nav>

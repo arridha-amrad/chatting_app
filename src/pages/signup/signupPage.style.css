@@ -1,6 +1,7 @@
 #signup_page {
   display: flex;
   flex-direction: column;
+  font-family: 'Nunito', sans-serif;
 }
 
 #signup_page main {

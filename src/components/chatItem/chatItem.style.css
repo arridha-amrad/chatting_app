@@ -1,0 +1,49 @@
+.chat_item_container {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  background-color: red;
+  padding: 1rem -2rem;
+}
+
+.chat_item_container .chat_user {
+  display: flex;
+  flex: 1 0 0;
+  gap: 1rem;
+  align-items: flex-start;
+  color: var(--black);
+}
+
+.chat_item_container .chat_user .left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat_item_container .chat_user .left img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  object-fit: cover;
+}
+
+.chat_item_container .chat_user .right {
+  display: flex;
+  gap: 0.3rem;
+  height: 100%;
+  flex-direction: column;
+}
+
+.chat_item_container .chat_user .right p {
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  color: rgb(112, 112, 112) !important;
+}
+
+.chat_item_container .chat_moment {
+  flex: 0 1 0;
+}

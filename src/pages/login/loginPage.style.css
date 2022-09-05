@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100vh 80px;
+  font-family: 'Nunito', sans-serif;
 }
 
 #login_page .sidebar {

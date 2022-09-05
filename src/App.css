@@ -1,20 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
   --blue: #198cfe;
   --blue_hover: #57abff;
   --blue_outline: #57abff81;
-  --white: #eee;
+  --white: #fff;
   --pink: #ea4c89;
   --pink_hover: #eb7da7;
   --pink_outline: #eb7da781;
+  --white_bg: #f1f1f1;
+  --white_v2: #f5f5f5;
+  --white_v3: #f0f0f0;
+  --white_v4: #fafafa;
+  --red: #d34141;
+  --black: #292c31;
+  --green: #166e48;
+  --green_v2: #5eaa89;
+  --gray: #a9abad;
+  --gray_v2: #64666a;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
 }
 
 /* INPUT */
@@ -40,8 +49,8 @@
   font-size: large;
 }
 
-input:hover,
-input:focus {
+.input_wrapper .text_input:hover,
+.input_wrapper .text_input:focus {
   box-shadow: 0 0 0 4px var(--pink_outline);
   border: none;
   outline-color: var(--pink_outline);

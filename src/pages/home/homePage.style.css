@@ -1,0 +1,88 @@
+#home_page {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+#home_page main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-color: var(--white);
+}
+
+#home_page main .messages {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  gap: 1rem;
+}
+
+#home_page main .messages .pin_message_container p {
+  color: var(--gray);
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+#home_page main .messages .pin_message_container p i {
+  margin-right: 1rem;
+  transform: rotate(45deg);
+}
+
+#home_page main .messages .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#home_page main .messages .header h1 {
+  font-weight: bold;
+}
+
+#home_page main .messages .header i {
+  font-size: larger;
+  color: var(--green_v2);
+  cursor: pointer;
+}
+
+#home_page main .messages .search_container {
+  position: relative;
+}
+
+#home_page main .chat_room {
+  grid-column: 2 / 3;
+  background-color: #808080;
+}
+
+#home_page main .chat_detail {
+  grid-column: 3 / 4;
+  background-color: aquamarine;
+}
+
+/* FOOTER */
+
+#home_page footer {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home_page footer p span {
+  font-weight: bold;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 15px;
+  background-color: #808080;
+}
