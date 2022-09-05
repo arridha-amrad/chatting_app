@@ -30,7 +30,7 @@
 
 .input_wrapper .text_input {
   width: 100%;
-  background-color: #eee;
+  background-color: #efefef;
   border: none;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
@@ -40,11 +40,12 @@
   font-size: large;
 }
 
-input:focus,
-input:hover {
+input:hover,
+input:focus {
   box-shadow: 0 0 0 4px var(--pink_outline);
   border: none;
   outline-color: var(--pink_outline);
+  background-color: #fff !important;
 }
 
 /* BUTTON */
@@ -56,7 +57,7 @@ input:hover {
   font-weight: bolder;
   font-size: larger;
   border-radius: 0.5rem;
-  color: #eee;
+  color: #fff;
   transition: all 0.3s ease;
   padding: 0 2rem;
 }
@@ -67,4 +68,9 @@ input:hover {
 
 .btn_primary:focus {
   box-shadow: 0 0 0 4px pink;
+}
+
+/* LINK */
+.link {
+  text-decoration: none;
 }

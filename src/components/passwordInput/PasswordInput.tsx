@@ -1,5 +1,6 @@
 import { ChangeEventHandler, FC, useState } from "react";
 import { Link } from "react-router-dom";
+import "./passwordInput.style.css";
 
 interface IProps {
   name: string;
@@ -22,7 +23,7 @@ const PasswordInput: FC<IProps> = ({
       <div className="password_label_container">
         <label>{label}</label>
         {isWithForgotPassword && (
-          <Link className="link" to="/">
+          <Link className="link" to="/forgot-password">
             Forgot Password
           </Link>
         )}
@@ -31,13 +32,13 @@ const PasswordInput: FC<IProps> = ({
         name={name}
         value={value}
         onChange={onChange}
-        type={"password"}
+        type={isShowPassword ? "text" : "password"}
         className="text_input"
       />
       <div className="show_password_container">
         <input
           checked={isShowPassword}
-          onChange={(e) => setIsShowPassword(!isShowPassword)}
+          onChange={(_) => setIsShowPassword(!isShowPassword)}
           className="check_input"
           type="checkbox"
         />

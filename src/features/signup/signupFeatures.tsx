@@ -1,6 +1,7 @@
 import { PasswordInput, TextInput } from "../../components/components.export";
 import useForm from "../../hooks/useForm";
 import "./signupFeatures.style.css";
+import "../features.shared.style.css";
 
 interface ISignUpState {
   firstName: string;
@@ -20,7 +21,7 @@ const SignUpForm = () => {
   const { email, firstName, lastName, password } = state;
 
   return (
-    <form onSubmit={onSubmit} className="signup_form">
+    <form onSubmit={onSubmit} className="flex_form">
       <div className="name_container">
         <div className="first_name_container">
           <TextInput
@@ -50,7 +51,6 @@ const SignUpForm = () => {
         name="password"
         onChange={onChange}
         value={password}
-        isWithForgotPassword={true}
       />
       <button type="submit" className="btn_primary">
         Sign Up
