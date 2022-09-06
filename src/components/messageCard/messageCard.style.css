@@ -44,7 +44,7 @@
 .message_card .chat_user .message_bubble {
   align-self: flex-start;
   border-radius: 0 0.8rem 0.8rem 0.8rem;
-  background-color: rgb(230, 230, 230);
+  background-color: #e6e6e6;
   padding: 1rem;
   border: none;
   max-width: 90%;
@@ -53,8 +53,21 @@
 .message_bubble_right {
   border-radius: 0.8rem 0rem 0.8rem 0.8rem;
   background-color: var(--pink);
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 1rem;
   border: none;
-  color: var(--white);
   align-self: flex-end;
+  position: relative;
+  color: var(--white);
+}
+
+.message_bubble_right i {
+  position: absolute;
+  bottom: 10px;
+  right: 8px;
+}
+
+.message_status_delivery {
+  color: var(--gray);
+  font-size: 0.9rem;
+  /* color: var(--blue); */
 }

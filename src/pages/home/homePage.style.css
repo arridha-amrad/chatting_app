@@ -1,7 +1,7 @@
 #home_page {
   display: flex;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 #home_page main {
@@ -58,17 +58,6 @@
   margin-right: 1rem;
 }
 
-#home_page main .chat_room {
-  flex: 2 2 0;
-  height: 100vh;
-}
-
-#home_page main .chat_detail {
-  display: none;
-  flex: 1 2 0;
-  background-color: aquamarine;
-}
-
 #home_page main .messages ::-webkit-scrollbar {
   width: 15px;
 }
@@ -80,13 +69,30 @@
   background-color: #aeaeae;
 }
 
+/* CHAT ROOM */
+
+#home_page main .chat_room {
+  flex: 2 2 0;
+  height: 100vh;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* CHAT DETAIL */
+
+#home_page main .chat_detail {
+  display: none;
+  flex: 1 2 0;
+}
+
 @media screen and (min-width: 1000px) {
+  /* CHAT DETAIL */
   #home_page main .chat_detail {
     display: block;
   }
 }
 
 @media screen and (min-width: 760px) {
+  /* MESSAGES */
   #home_page main .messages {
     display: flex;
   }
@@ -104,15 +110,3 @@
 #home_page footer p span {
   font-weight: bold;
 }
-
-/* SCROLLBAR */
-/* ::-webkit-scrollbar {
-  width: 15px;
-}
-
-::-webkit-scrollbar-thumb {
-  border: 4px solid rgba(0, 0, 0, 0);
-  background-clip: padding-box;
-  border-radius: 15px;
-  background-color: #808080;
-} */

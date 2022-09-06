@@ -1,6 +1,11 @@
-import { SearchInput } from "../../components/components.export";
-import { Chat, Chats } from "../../features/features.export";
-import "./homePage.style.css";
+import {
+  GetChat,
+  GetChats,
+  SearchChat,
+  DetailChat,
+} from '../../features/features.export';
+
+import './homePage.style.css';
 
 const Home = () => {
   return (
@@ -12,23 +17,20 @@ const Home = () => {
             <i className="fas fa-pen-to-square"></i>
           </div>
           <div className="search_container">
-            <SearchInput />
+            <SearchChat />
           </div>
           <div className="chat_category">
             <i className="fas fa-comments"></i> all messages
           </div>
-          <Chats />
+          <GetChats />
         </div>
         <div className="chat_room">
-          <Chat />
+          <GetChat />
         </div>
-        <div className="chat_detail"></div>
+        <div className="chat_detail">
+          <DetailChat />
+        </div>
       </main>
-      {/* <footer>
-        <p>
-          Created by <span>Arridha Amrad</span>
-        </p>
-      </footer> */}
     </section>
   );
 };

@@ -1,10 +1,10 @@
-import "./getChat.style.css";
-import ChatUser from "../../images/chat_user2.jpg";
+import './getChat.style.css';
+import ChatUser from '../../images/chat_user2.jpg';
 import {
   MessageCardForOthers,
   MessageCardForMe,
   MessageInput,
-} from "../../components/components.export";
+} from '../../components/components.export';
 
 const GetChat = () => {
   return (
@@ -30,8 +30,6 @@ const GetChat = () => {
         </div>
         <div className="list_messages">
           <MessageCardForOthers />
-          <MessageCardForMe />
-          <MessageCardForMe />
           <MessageCardForMe />
           <MessageCardForOthers />
         </div>
