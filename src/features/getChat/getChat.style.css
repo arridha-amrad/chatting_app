@@ -1,0 +1,113 @@
+.get_chat {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.get_chat .chat_header {
+  padding: 0 2rem;
+  height: 100px;
+  display: flex;
+  gap: 1.3rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.list_messages_shadow {
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2) inset;
+}
+
+.get_chat .chat_header .avatar img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  object-fit: cover;
+}
+
+.get_chat .chat_header .user_info {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  flex-direction: column;
+}
+
+.get_chat .chat_header .user_info .username {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.get_chat .chat_header .user_info .last_seen {
+  color: #a3a3a3;
+}
+
+.get_chat .chat_header .chat_via {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.get_chat .chat_header .chat_via i {
+  display: block;
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+/* ==================================================== */
+.get_chat .chat_messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white_v2);
+  z-index: 10;
+}
+
+.get_chat .chat_messages .time_wrapper {
+  position: relative;
+  margin: 1rem 2rem;
+}
+
+.get_chat .chat_messages .time_wrapper .divider {
+  border-color: var(--white_v2);
+}
+
+.get_chat .chat_messages .time_wrapper p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white_v2);
+  padding: 1rem 2rem;
+  color: var(--gray);
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.get_chat .chat_messages .list_messages {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.9rem;
+  z-index: -12;
+}
+
+/* ==================================================== */
+
+.chat_composer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding-bottom: 0.5rem;
+  z-index: 22;
+}
+
+.get_chat ::-webkit-scrollbar {
+  width: 15px;
+}
+
+.get_chat ::-webkit-scrollbar-thumb {
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 15px;
+  background-color: #aeaeae;
+}

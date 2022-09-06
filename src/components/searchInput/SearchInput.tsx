@@ -1,4 +1,4 @@
-import './searchInput.style.css';
+import "./searchInput.style.css";
 
 const SearchInput = () => {
   return (

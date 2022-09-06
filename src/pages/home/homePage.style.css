@@ -1,64 +1,95 @@
 #home_page {
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #home_page main {
   height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  display: flex;
   background-color: var(--white);
 }
 
 #home_page main .messages {
-  grid-column: 1 / 2;
-  display: flex;
+  display: none;
+  position: relative;
+  flex: 1 0 0;
+  padding-top: 1rem;
+  gap: 1.3rem;
+  height: 100%;
   flex-direction: column;
-  padding: 1rem 2rem;
-  gap: 1rem;
-}
-
-#home_page main .messages .pin_message_container p {
-  color: var(--gray);
-  font-weight: bold;
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
-}
-
-#home_page main .messages .pin_message_container p i {
-  margin-right: 1rem;
-  transform: rotate(45deg);
+  border-right: 1px solid #eee;
 }
 
 #home_page main .messages .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1rem;
 }
 
 #home_page main .messages .header h1 {
   font-weight: bold;
+  font-size: 2.2rem;
 }
 
 #home_page main .messages .header i {
   font-size: larger;
-  color: var(--green_v2);
+  color: var(--pink);
   cursor: pointer;
 }
 
 #home_page main .messages .search_container {
   position: relative;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  height: 50px;
+}
+
+#home_page main .messages .chat_category {
+  padding: 0 1rem;
+  color: var(--gray);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+#home_page main .messages .chat_category i {
+  margin-right: 1rem;
 }
 
 #home_page main .chat_room {
-  grid-column: 2 / 3;
-  background-color: #808080;
+  flex: 2 2 0;
+  height: 100vh;
 }
 
 #home_page main .chat_detail {
-  grid-column: 3 / 4;
+  display: none;
+  flex: 1 2 0;
   background-color: aquamarine;
+}
+
+#home_page main .messages ::-webkit-scrollbar {
+  width: 15px;
+}
+
+#home_page main .messages ::-webkit-scrollbar-thumb {
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 15px;
+  background-color: #aeaeae;
+}
+
+@media screen and (min-width: 1000px) {
+  #home_page main .chat_detail {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  #home_page main .messages {
+    display: flex;
+  }
 }
 
 /* FOOTER */
@@ -75,8 +106,7 @@
 }
 
 /* SCROLLBAR */
-
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 15px;
 }
 
@@ -85,4 +115,4 @@
   background-clip: padding-box;
   border-radius: 15px;
   background-color: #808080;
-}
+} */

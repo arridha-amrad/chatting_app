@@ -1,0 +1,37 @@
+.list_chats {
+  margin-top: -1rem;
+  flex: 1;
+  overflow-y: auto;
+}
+.flipped {
+  direction: rtl;
+}
+.list_chat_with_shadow {
+  box-shadow: -10px 0 20px -5px rgba(0, 0, 0, 0.164);
+}
+
+.chat_item {
+  direction: ltr;
+  padding: 1rem;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.chat_item:hover {
+  background-color: var(--white_v2);
+}
+
+.chats_divider {
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  padding: 0 1rem;
+  height: 1px;
+  background-color: rgba(211, 211, 211, 0.376);
+}

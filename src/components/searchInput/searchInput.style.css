@@ -1,14 +1,16 @@
 .search_input_wrapper {
-  height: 50px;
   width: 100%;
+  height: 100%;
   display: flex;
   background-color: var(--white_v3);
   border-radius: 0.5rem;
   align-items: center;
-  padding: 0 1rem;
 }
 
 .search_input_wrapper i {
+  position: absolute;
+  top: 12px;
+  left: 30px;
   font-size: 1.5rem;
   color: var(--gray);
   margin-right: 1rem;
@@ -16,11 +18,22 @@
 
 .search_input_wrapper input {
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600 !important;
-  font-family: 'Nunito', sans-serif !important;
+  font-family: "Nunito", sans-serif !important;
   color: var(--gray_v2);
   outline: none;
   width: 100%;
+  height: 100%;
+  padding-left: 2.7rem;
+  padding-right: 1rem;
   background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.search_input_wrapper input:focus,
+input:hover {
+  box-shadow: 0 0 0 4px var(--pink_outline);
+  border-radius: 0.5rem;
+  background-color: #fff !important;
 }

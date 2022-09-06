@@ -1,0 +1,60 @@
+.message_card {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.message_card .chat_user {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.message_card_right {
+  align-self: flex-end;
+}
+
+.chat_user_right {
+  text-align: end;
+}
+
+.chat_user_right span {
+  margin-right: 1rem;
+}
+
+.message_card .avatar img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 3rem;
+}
+
+.message_card .chat_user .username {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.message_card .chat_user .username span {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-left: 0.5rem;
+}
+
+.message_card .chat_user .message_bubble {
+  align-self: flex-start;
+  border-radius: 0 0.8rem 0.8rem 0.8rem;
+  background-color: rgb(230, 230, 230);
+  padding: 1rem;
+  border: none;
+  max-width: 90%;
+}
+
+.message_bubble_right {
+  border-radius: 0.8rem 0rem 0.8rem 0.8rem;
+  background-color: var(--pink);
+  padding: 1rem;
+  border: none;
+  color: var(--white);
+  align-self: flex-end;
+}

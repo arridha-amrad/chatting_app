@@ -1,7 +1,12 @@
-import Avatar1 from '../../images/chat_user1.jpg';
-import './chatItem.style.css';
+import { FC } from "react";
+import Avatar1 from "../../images/chat_user1.jpg";
+import "./chatItem.style.css";
 
-const ChatItem = () => {
+interface IProps {
+  type: "read" | "unread" | "notif" | "typing";
+}
+
+const ChatItem: FC<IProps> = ({ type }) => {
   return (
     <div className="chat_item_container">
       <div className="chat_user">
@@ -9,13 +14,25 @@ const ChatItem = () => {
           <img src={Avatar1} alt="avatar" />
         </div>
         <div className="right">
-          <h4>Susan Doe</h4>
-          <p>Hello World</p>
+          <h4 className="username">Susan Doe</h4>
+          {type === "typing" ? (
+            <div className="chat_typing">Typing...</div>
+          ) : (
+            <div className="message">Hello World</div>
+          )}
         </div>
       </div>
       <div className="chat_moment">
-        <p>14.30</p>
-        <div className="unread_chat"></div>
+        <div className="time">14.30</div>
+        <div className="chat_info">
+          {type === "read" && (
+            <i className="fas fa-check message_read_indicator"></i>
+          )}
+          {type === "unread" && (
+            <i className="fas fa-check message_unread_indicator"></i>
+          )}
+          {type === "notif" && <div className="chat_ballon">2</div>}
+        </div>
       </div>
     </div>
   );
