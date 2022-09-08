@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
-  --blue: #198cfe;
-  --blue_hover: #57abff;
-  --blue_outline: #57abff81;
+  --blue: #2196f3;
+  --blue_hover: #0069c0;
+  --blue_outline: #6ec6ff;
   --white: #fff;
   --pink: #ea4c89;
   --pink_hover: #eb7da7;
@@ -12,9 +12,11 @@
   --white_v2: #f5f5f5;
   --white_v3: #f0f0f0;
   --white_v4: #fafafa;
-  --red: #d34141;
+  --red: #f44336;
   --black: #292c31;
-  --green: #166e48;
+  --green: #4caf50;
+  --greenLight: #80e27e;
+  --greenDark: #087f23;
   --green_v2: #5eaa89;
   --gray: #a9abad;
   --gray_v2: #64666a;
@@ -26,9 +28,21 @@
   box-sizing: border-box;
 }
 
+/* TEXT */
+
 p {
   padding: 0;
   margin: 0;
+}
+
+/* BUTTON */
+button {
+  cursor: pointer;
+  border: none;
+}
+
+button:hover > i {
+  color: var(--green) !important;
 }
 
 /* INPUT */
@@ -44,7 +58,7 @@ p {
 
 .input_wrapper .text_input {
   width: 100%;
-  background-color: #efefef;
+  background-color: var(--white_v3);
   border: none;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
@@ -54,17 +68,17 @@ p {
   font-size: large;
 }
 
-.input_wrapper .text_input:hover,
-.input_wrapper .text_input:focus {
-  box-shadow: 0 0 0 4px var(--pink_outline);
+input:hover,
+input:focus {
+  box-shadow: 0 0 0 4px var(--greenLight);
   border: none;
-  outline-color: var(--pink_outline);
-  background-color: #fff !important;
+  outline-color: var(--greenLight);
+  background-color: #fff;
 }
 
 /* BUTTON */
 .btn_primary {
-  background-color: var(--pink);
+  background-color: var(--green);
   height: 3rem;
   cursor: pointer;
   border: none;
@@ -77,11 +91,11 @@ p {
 }
 
 .btn_primary:hover {
-  background-color: var(--pink_hover);
+  background-color: var(--greenDark);
 }
 
 .btn_primary:focus {
-  box-shadow: 0 0 0 4px pink;
+  box-shadow: 0 0 0 4px var(--greenLight);
 }
 
 /* LINK */

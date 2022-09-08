@@ -31,7 +31,7 @@ const ChatItem: FC<IProps> = ({ type }) => {
           {type === "unread" && (
             <i className="fas fa-check message_unread_indicator"></i>
           )}
-          {type === "notif" && <div className="chat_ballon">2</div>}
+          {type === "notif" && <div className="chat_balloon">2</div>}
         </div>
       </div>
     </div>

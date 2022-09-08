@@ -31,7 +31,7 @@
 
 .message_input textarea:hover,
 textarea:focus {
-  box-shadow: 0 0 0 4px var(--pink_outline);
+  box-shadow: 0 0 0 4px var(--greenLight);
 }
 
 .message_input .message_options {
@@ -58,7 +58,6 @@ textarea:focus {
 
 .message_input .message_options button:hover {
   background-color: var(--white);
-  color: var(--pink);
   border: 1px solid var(--white_v3);
 }
 

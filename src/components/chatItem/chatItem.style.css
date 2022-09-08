@@ -43,24 +43,26 @@
 
 .message_read_indicator {
   color: var(--blue);
+  align-self: flex-end;
 }
 .message_unread_indicator {
   color: var(--gray);
+  align-self: flex-end;
 }
 
-.chat_info .chat_ballon {
+.chat_info .chat_balloon {
   display: flex;
+  align-self: flex-end;
   align-items: center;
   justify-content: center;
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background-color: var(--red);
+  background-color: var(--green);
   color: var(--white);
   padding: 0.5rem;
   font-size: 0.9rem;
   font-weight: bold;
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.189);
 }
 
 .chat_typing {

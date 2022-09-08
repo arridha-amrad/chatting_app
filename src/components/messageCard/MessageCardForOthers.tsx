@@ -8,9 +8,6 @@ const MessageCard = () => {
         <img src={ChatUser} />
       </div>
       <div className="chat_user">
-        <div className="username">
-          Alexandra Patrova <span>9:12 AM</span>
-        </div>
         <div className="message_bubble">Hi</div>
         <div className="message_bubble">Have a great working weeek!</div>
         <div className="message_bubble">
@@ -26,6 +23,9 @@ const MessageCard = () => {
           illum reiciendis placeat quae sint. Numquam minima pariatur unde non,
           consequatur harum molestiae eveniet! Autem nemo error sit nihil
           reprehenderit.
+        </div>
+        <div className="username">
+          Alexandra Patrova <span>9:12 AM</span>
         </div>
       </div>
     </div>

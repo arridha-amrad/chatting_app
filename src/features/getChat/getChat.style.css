@@ -42,12 +42,24 @@
 
 .get_chat .chat_header .chat_via {
   display: flex;
-  gap: 1.3rem;
+}
+
+.get_chat .chat_header .chat_via button {
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2.5rem;
+  background-color: var(--white);
+}
+
+.get_chat .chat_header .chat_via button:hover {
+  background-color: var(--white);
+  border: 1px solid var(--white_bg);
 }
 
 .get_chat .chat_header .chat_via i {
   display: block;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--gray);
 }
 
@@ -110,4 +122,24 @@
   background-clip: padding-box;
   border-radius: 15px;
   background-color: #aeaeae;
+}
+
+@media screen and (max-width: 1000px) {
+  .get_chat .chat_header {
+    height: 80px;
+  }
+  .get_chat .chat_header .avatar img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+  }
+  .get_chat .chat_header .user_info .username {
+    font-size: 1.2rem;
+  }
+  .get_chat .chat_header .user_info .last_seen {
+    font-size: 0.9rem;
+  }
+  .get_chat .chat_header .chat_via {
+    display: none;
+  }
 }

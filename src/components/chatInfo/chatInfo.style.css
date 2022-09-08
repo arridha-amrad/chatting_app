@@ -1,7 +1,8 @@
 .chat_info {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .chat_info .chat_user {
@@ -11,17 +12,17 @@
   align-items: center;
   padding: 0 1rem;
   gap: 1rem;
-  height: 300px;
+  height: 250px;
 }
 
 .chat_info .chat_user h1 {
-  font-size: 2.3rem;
+  font-size: 1.8rem;
 }
 
 .chat_info .chat_user img {
-  width: 11rem;
-  height: 11rem;
-  border-radius: 11rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 8rem;
   object-fit: cover;
 }
 
@@ -33,31 +34,30 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  position: relative;
 }
 
 .chat_info .social_media button {
   border: none;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 3rem;
-  cursor: pointer;
-  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2.5rem;
 }
 
 .chat_info .social_media button p {
   visibility: hidden;
   position: absolute;
-  padding: 0.4rem;
-  background-color: var(--white_v3);
-  bottom: -40%;
+  padding: 0.4rem 1rem;
+  background-color: var(--white_bg);
+  bottom: -50%;
   left: 50%;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   transform: translate(-50%, 50%);
 }
 
 .chat_info .social_media button:hover {
   background-color: var(--white);
-  outline: 1px solid var(--pink_outline);
+  outline: 1px solid var(--white_bg);
 }
 
 .chat_info .social_media button:hover > p {
@@ -69,7 +69,7 @@
 }
 
 .chat_info .social_media button i {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 /* INFO CATEGORY */
@@ -101,14 +101,36 @@
 }
 
 .chat_info .media img {
-  width: 8rem;
-  height: 8rem;
+  width: 5rem;
+  height: 5rem;
   object-fit: cover;
   border-radius: 1rem;
   cursor: pointer;
 }
 
+@media screen and (min-width: 1500px) {
+  .chat_info .media img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 1rem;
+  }
+
+  .chat_info .chat_user img {
+    width: 11rem;
+    height: 11rem;
+    border-radius: 11rem;
+  }
+
+  .chat_info .chat_user {
+    height: 300px;
+  }
+
+  .chat_info .chat_user h1 {
+    font-size: 2.3rem;
+  }
+}
+
 .chat_info .media img:hover {
-  outline: 2px solid var(--pink_outline);
+  outline: 2px solid var(--greenLight);
   outline-offset: 5px;
 }

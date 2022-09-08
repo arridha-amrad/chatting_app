@@ -1,10 +1,10 @@
-import './getChat.style.css';
-import ChatUser from '../../images/chat_user2.jpg';
+import "./getChat.style.css";
+import ChatUser from "../../images/chat_user2.jpg";
 import {
   MessageCardForOthers,
   MessageCardForMe,
   MessageInput,
-} from '../../components/components.export';
+} from "../../components/components.export";
 
 const GetChat = () => {
   return (
@@ -18,9 +18,15 @@ const GetChat = () => {
           <div className="last_seen">last seen today at 19.20</div>
         </div>
         <div className="chat_via">
-          <i className="fas fa-message"></i>
-          <i className="fas fa-phone"></i>
-          <i className="fas fa-video"></i>
+          <button>
+            <i className="fas fa-message"></i>
+          </button>
+          <button>
+            <i className="fas fa-phone"></i>
+          </button>
+          <button>
+            <i className="fas fa-video"></i>
+          </button>
         </div>
       </div>
       <div className="chat_messages">
@@ -29,7 +35,7 @@ const GetChat = () => {
           <p>Today</p>
         </div>
         <div className="list_messages">
-          <MessageCardForOthers />
+          {/* <MessageCardForOthers /> */}
           <MessageCardForMe />
           <MessageCardForOthers />
         </div>

@@ -1,18 +1,82 @@
 #home_page {
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #home_page main {
+  position: relative;
   height: 100vh;
+  width: 100vw;
   display: flex;
   background-color: var(--white);
 }
 
+#home_page main .sidebar {
+  flex: 0 0 100px;
+  background-color: var(--green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0rem;
+  gap: 3rem;
+}
+
+#home_page main .sidebar .avatar img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  object-fit: cover;
+  outline: 5px double var(--greenLight);
+  cursor: pointer;
+}
+
+#home_page main .sidebar .main_menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar_menu_button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  background-color: transparent;
+  position: relative;
+}
+
+.sidebar_menu_button:hover {
+  background-color: var(--greenLight);
+}
+
+.sidebar_menu_button:hover > i {
+  color: var(--white) !important;
+}
+
+.sidebar_menu_button:hover > .tooltip {
+  opacity: 1;
+}
+
+.sidebar_menu_button i {
+  font-size: 1.4rem;
+  color: var(--greenLight) !important;
+}
+
+.sidebar_menu_button .tooltip {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
 #home_page main .messages {
   display: none;
-  position: relative;
   flex: 1 0 0;
   padding-top: 1rem;
   gap: 1.3rem;
@@ -21,29 +85,10 @@
   border-right: 1px solid #eee;
 }
 
-#home_page main .messages .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
-}
-
-#home_page main .messages .header h1 {
-  font-weight: bold;
-  font-size: 2.2rem;
-}
-
-#home_page main .messages .header i {
-  font-size: larger;
-  color: var(--pink);
-  cursor: pointer;
-}
-
 #home_page main .messages .search_container {
-  position: relative;
-  padding: 0 1rem;
   margin-bottom: 1rem;
   height: 50px;
+  padding: 0 1rem;
 }
 
 #home_page main .messages .chat_category {
@@ -80,22 +125,9 @@
 /* CHAT DETAIL */
 
 #home_page main .chat_detail {
-  display: none;
+  display: block;
   flex: 1 2 0;
-}
-
-@media screen and (min-width: 1000px) {
-  /* CHAT DETAIL */
-  #home_page main .chat_detail {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 760px) {
-  /* MESSAGES */
-  #home_page main .messages {
-    display: flex;
-  }
+  overflow-y: auto;
 }
 
 /* FOOTER */
@@ -109,4 +141,49 @@
 
 #home_page footer p span {
   font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+  /* CHAT DETAIL */
+  #home_page main .chat_detail {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #home_page main .sidebar {
+    flex: 0 0 60px;
+  }
+  #home_page main .sidebar .avatar img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2.4rem;
+  }
+  .sidebar_menu_button {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 1.5rem;
+  }
+  .sidebar_menu_button:hover {
+    background-color: transparent;
+  }
+  .sidebar_menu_button:hover > .tooltip {
+    font-size: 0.7rem;
+  }
+  .sidebar_menu_button i {
+    font-size: 1rem;
+  }
+  #home_page main .messages {
+    flex: 2 5 0;
+  }
+  #home_page main .chat_room {
+    flex: 3 1 0;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  /* MESSAGES */
+  #home_page main .messages {
+    display: flex;
+  }
 }

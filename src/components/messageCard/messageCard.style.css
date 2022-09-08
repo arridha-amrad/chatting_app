@@ -2,6 +2,7 @@
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
+  align-items: flex-end;
 }
 
 .message_card .chat_user {
@@ -43,7 +44,7 @@
 
 .message_card .chat_user .message_bubble {
   align-self: flex-start;
-  border-radius: 0 0.8rem 0.8rem 0.8rem;
+  border-radius: 0.8rem 0.8rem 0.8rem 0rem;
   background-color: #e6e6e6;
   padding: 1rem;
   border: none;
@@ -51,8 +52,8 @@
 }
 
 .message_bubble_right {
-  border-radius: 0.8rem 0rem 0.8rem 0.8rem;
-  background-color: var(--pink);
+  border-radius: 0.8rem 0.8rem 0rem 0.8rem;
+  background-color: var(--green);
   padding: 1rem 2rem 1rem 1rem;
   border: none;
   align-self: flex-end;
