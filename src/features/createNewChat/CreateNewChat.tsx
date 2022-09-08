@@ -1,5 +1,5 @@
-import { FC } from "react";
-import "./createNewChat.style.css";
+import { FC } from 'react';
+import './createNewChat.style.css';
 
 interface IProps {
   setIsOpen: VoidFunction;
@@ -12,7 +12,6 @@ const CreateNewChat: FC<IProps> = ({ setIsOpen }) => {
       <button onClick={setIsOpen} className="btn_menu">
         <i className="fas fa-pen-to-square"></i>
       </button>
-      {/* <div className="start_chat_overlay"></div> */}
     </div>
   );
 };

@@ -1,16 +1,16 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
 import {
   ForgotPasswordPage,
-  HomePage,
+  ChattingPage,
   LoginPage,
   SignUpPage,
-} from "./pages/pages.export";
-import "./App.css";
+} from './pages/pages.export';
+import './App.css';
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<ChattingPage />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/forgot-password" element={<ForgotPasswordPage />} />

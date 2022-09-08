@@ -1,0 +1,74 @@
+.room-header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.room-header__drawer_btn {
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  background-color: transparent;
+}
+
+.room-header__drawer_btn i {
+  font-size: 1rem;
+}
+
+.room-header__user {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.room-header__avatar img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  object-fit: cover;
+}
+
+.room-header__user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.room-header__last-seen {
+  color: var(--gray);
+}
+
+.room-header__pinned_btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+}
+
+.room-header__pinned_btn i {
+  color: var(--gray);
+  font-size: 1rem;
+}
+
+.room-header__pinned_btn:hover {
+  background-color: var(--white);
+  outline: 1px solid var(--white_bg);
+}
+
+.room-header__pinned_btn:hover > i {
+  color: var(--pink) !important;
+}
+
+@media screen and (max-width: 760px) {
+  .room-header__pinned_btn {
+    background-color: transparent;
+  }
+  .room-header {
+    padding: 0 1rem;
+  }
+  .room-header__drawer_btn {
+    display: block;
+  }
+}

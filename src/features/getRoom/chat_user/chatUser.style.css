@@ -1,0 +1,22 @@
+.get_chat .chat_header .avatar img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  object-fit: cover;
+}
+
+.get_chat .chat_header .user_info {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  flex-direction: column;
+}
+
+.get_chat .chat_header .user_info .username {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.get_chat .chat_header .user_info .last_seen {
+  color: #a3a3a3;
+}

@@ -1,11 +1,11 @@
-import "./messageCard.style.css";
-import ChatUser from "../../images/chat_user2.jpg";
+import './messageCard.style.css';
+import ChatUser from '../../images/chat_user2.jpg';
 
 const MessageCard = () => {
   return (
     <div className="message_card">
       <div className="avatar">
-        <img src={ChatUser} />
+        <img src={ChatUser} alt="avatar" />
       </div>
       <div className="chat_user">
         <div className="message_bubble">Hi</div>

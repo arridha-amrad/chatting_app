@@ -1,5 +1,4 @@
 .list_chats {
-  margin-top: -1rem;
   flex: 1;
   overflow-y: auto;
 }
@@ -11,7 +10,6 @@
 }
 
 .chat_item {
-  direction: ltr;
   padding: 1rem;
   height: 80px;
   display: flex;

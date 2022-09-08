@@ -1,0 +1,10 @@
+.pinned_chat {
+  padding: 1rem;
+  height: 80px;
+  margin-top: -1rem;
+  cursor: pointer;
+}
+
+.pinned_chat:hover {
+  background-color: var(--white_v2);
+}

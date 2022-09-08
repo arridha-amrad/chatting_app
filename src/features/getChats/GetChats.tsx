@@ -1,8 +1,8 @@
-import { ChatItem } from "../../components/components.export";
-import "./getChats.style.css";
+import { ChatItem } from '../../components/components.export';
+import './getChats.style.css';
 
 const GetChats = () => {
-  const pinnedChats = [1, 2, 3, 4, 5, 2, 2, 3, 4];
+  const pinnedChats = [1, 2, 3, 4, 5, 2, 2, 3, 4, 1, 2, 3, 4, 5];
   return (
     <div className="list_chats">
       {pinnedChats.map((_, i) => (
@@ -10,12 +10,12 @@ const GetChats = () => {
           <ChatItem
             type={
               i % 2 === 0
-                ? "notif"
+                ? 'notif'
                 : i % 3 === 0
-                ? "read"
+                ? 'read'
                 : i % 5 === 0
-                ? "typing"
-                : "unread"
+                ? 'typing'
+                : 'unread'
             }
           />
           {i !== pinnedChats.length - 1 && <div className="chats_divider" />}

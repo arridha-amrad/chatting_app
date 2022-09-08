@@ -6,3 +6,4 @@ export { default as MessageCardForOthers } from './messageCard/MessageCardForOth
 export { default as MessageCardForMe } from './messageCard/MessageCardForMe';
 export { default as MessageInput } from './messageInput/MessageInput';
 export { default as ChatInfo } from './chatInfo/ChatInfo';
+export { default as HeaderCategory } from './tag/Tag';

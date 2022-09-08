@@ -1,0 +1,86 @@
+.sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0rem;
+  gap: 3rem;
+}
+
+.sidebar .avatar img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  object-fit: cover;
+  outline: 5px double var(--greenLight);
+  cursor: pointer;
+}
+
+.sidebar .main_menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar_menu_button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  background-color: transparent;
+  position: relative;
+}
+
+.sidebar_menu_button:hover {
+  background-color: var(--greenLight);
+}
+
+.sidebar_menu_button:hover > i {
+  color: var(--white) !important;
+}
+
+.sidebar_menu_button:hover > .tooltip {
+  opacity: 1;
+}
+
+.sidebar_menu_button i {
+  font-size: 1.4rem;
+  color: var(--greenLight) !important;
+}
+
+.sidebar_menu_button .tooltip {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+@media screen and (max-width: 1000px) {
+  .sidebar {
+    flex: 0 0 60px;
+  }
+  .sidebar .avatar img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2.4rem;
+  }
+  .sidebar_menu_button {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 1.5rem;
+  }
+  .sidebar_menu_button:hover {
+    background-color: transparent;
+  }
+  .sidebar_menu_button:hover > .tooltip {
+    font-size: 0.7rem;
+  }
+  .sidebar_menu_button i {
+    font-size: 1rem;
+  }
+}
