@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { ChatItem, SearchInput } from "../../../components/components.export";
-import "./chatInitDialog.style.css";
+import "./chatInitDialog.css";
 
 interface IProps {
   isOpen: boolean;

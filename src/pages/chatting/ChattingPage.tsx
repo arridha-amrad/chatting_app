@@ -1,57 +1,37 @@
-import { useState } from 'react';
-import Tag from '../../components/tag/Tag';
+import { useState } from "react";
+import { GetRoom } from "../../features/features.export";
+import ChatInfo from "./chatInfo/ChatInfo";
+import ChatInitDialog from "./chatInitDialog/ChatInitDialog";
 
-import {
-  GetRoom,
-  GetChats,
-  SearchChat,
-  DetailChat,
-} from '../../features/features.export';
-import GetPinnedChat from '../../features/getPinnedChat/GetPinnedChat';
-
-import ChatInitDialog from './chatInitDialog/ChatInitDialog';
-
-import './chattingPage.css';
-import SideBar from './sidebar/Sidebar';
+import "./chattingPage.css";
+import HiddenRooms from "./hiddenRooms/HiddenRooms";
+import Rooms from "./rooms/Rooms";
+import SideBar from "./sidebar/Sidebar";
 
 const ChattingPage = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isShowHiddenRooms, setIsShowHiddenRooms] = useState(false);
 
   return (
-    <section id="chatting_page">
-      <main className="chatting_page__main">
+    <section id="chatting-page">
+      <main className="chatting-page__main">
         <ChatInitDialog closeDialog={() => setIsOpen(false)} isOpen={isOpen} />
-        {/* ONE */}
-        <div className="chatting_page__sidebar">
+        <HiddenRooms
+          isShowHiddenRooms={isShowHiddenRooms}
+          setIsShowHiddenRooms={() => setIsShowHiddenRooms(false)}
+          setIsOpen={setIsOpen}
+        />
+        <div className="chatting-page__sidebar">
           <SideBar />
         </div>
-        {/* TWO */}
-        <div className="chatting_page__rooms">
-          <div className="chatting_page__rooms__header">
-            <h1>Messages</h1>
-            <button onClick={() => setIsOpen(true)}>
-              <i className="fas fa-pen-to-square"></i>
-            </button>
-          </div>
-          <div className="chatting_page__search">
-            <SearchChat />
-          </div>
-          <Tag FAIconClassName="fas fa-thumbtack" label="Pinned Chat" />
-          <div className="chatting_page__pinned_chat">
-            <GetPinnedChat />
-          </div>
-          <Tag FAIconClassName="fas fa-comments" label="All Chats" />
-          <div className="chatting_page__chats">
-            <GetChats />
-          </div>
+        <div className="chatting-page__rooms">
+          <Rooms setIsOpen={setIsOpen} />
         </div>
-        {/* THREE */}
-        <div className="chatting_page__room">
-          <GetRoom />
+        <div className="chatting-page__room">
+          <GetRoom setIsShowHiddenRooms={setIsShowHiddenRooms} />
         </div>
-        {/* FOUR */}
-        <div className="chatting_page__room_detail">
-          <DetailChat />
+        <div className="chatting-page__room_detail">
+          <ChatInfo />
         </div>
       </main>
     </section>

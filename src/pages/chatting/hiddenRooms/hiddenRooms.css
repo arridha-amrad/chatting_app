@@ -1,0 +1,42 @@
+.hidden-rooms {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 55;
+}
+
+.hidden-rooms--block {
+  display: block;
+}
+
+.hidden-rooms--hide {
+  display: none;
+}
+
+.hiddem-rooms__container {
+  max-width: 400px;
+  height: 100vh;
+  background-color: var(--white);
+}
+
+.hidden-rooms__close_btn {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+}
+
+.hidden-rooms__close_btn i {
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 760px) {
+  .hidden-rooms {
+    display: none;
+  }
+}

@@ -1,11 +1,11 @@
-.chat_info {
+.chatting-page-chat-info {
   width: 100%;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
 }
 
-.chat_info .chat_user {
+.chatting-page-chat-info__user {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,19 +15,18 @@
   height: 250px;
 }
 
-.chat_info .chat_user h1 {
+.chatting-page-chat-info__username {
   font-size: 1.8rem;
 }
 
-.chat_info .chat_user img {
+.chatting-page-chat-info__avatar {
   width: 8rem;
   height: 8rem;
   border-radius: 8rem;
   object-fit: cover;
 }
 
-/* SOCIAL MEDIA */
-.chat_info .social_media {
+.chatting-page-chat-info__social-media {
   padding: 0 1rem;
   margin-bottom: 2rem;
   display: flex;
@@ -37,15 +36,15 @@
   position: relative;
 }
 
-.chat_info .social_media button {
+.chatting-page-chat-info__btn-social-media {
   border: none;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 2.5rem;
 }
 
-.chat_info .social_media button p {
-  visibility: hidden;
+.chatting-page-chat-info__btn-social-media p {
+  opacity: 0;
   position: absolute;
   padding: 0.4rem 1rem;
   background-color: var(--white_bg);
@@ -53,22 +52,23 @@
   left: 50%;
   border-radius: 0.5rem;
   transform: translate(-50%, 50%);
+  transition: opacity 0.3s ease-in;
 }
 
-.chat_info .social_media button:hover {
+.chatting-page-chat-info__btn-social-media:hover {
   background-color: var(--white);
   outline: 1px solid var(--white_bg);
 }
 
-.chat_info .social_media button:hover > p {
-  visibility: visible;
+.chatting-page-chat-info__btn-social-media:hover > p {
+  opacity: 1;
 }
 
-.chat_info .social_media button:hover > i {
+.chatting-page-chat-info__btn-social-media:hover > i {
   color: var(--pink);
 }
 
-.chat_info .social_media button i {
+.chatting-page-chat-info__btn-social-media i {
   font-size: 1rem;
 }
 
@@ -86,21 +86,22 @@
 
 /* DESCRIPTION */
 
-.chat_info .description {
+.chatting-page-chat-info__description {
   padding: 0 1rem;
   margin-bottom: 2rem;
+  margin-top: 1rem;
   line-height: 1.3;
 }
 
 /* MEDIA */
-.chat_info .media {
+.chatting-page-chat-info__media {
   display: flex;
-  padding: 1rem 1rem;
+  padding: 1rem;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-.chat_info .media img {
+.chatting-page-chat-info__file-media {
   width: 5rem;
   height: 5rem;
   object-fit: cover;
@@ -109,13 +110,13 @@
 }
 
 @media screen and (min-width: 1500px) {
-  .chat_info .media img {
+  .chatting-page-chat-info__file-media {
     width: 8rem;
     height: 8rem;
     border-radius: 1rem;
   }
 
-  .chat_info .chat_user img {
+  .chatting-page-chat-info__avatar {
     width: 11rem;
     height: 11rem;
     border-radius: 11rem;
@@ -125,12 +126,12 @@
     height: 300px;
   }
 
-  .chat_info .chat_user h1 {
+  .chatting-page-chat-info__username {
     font-size: 2.3rem;
   }
 }
 
-.chat_info .media img:hover {
+.chatting-page-chat-info__file-media:hover {
   outline: 2px solid var(--greenLight);
   outline-offset: 5px;
 }

@@ -1,108 +1,66 @@
-#chatting_page {
+#chatting-page {
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   overflow-x: hidden;
 }
 
-.chatting_page__main {
+.icon-rotate-45 {
+  rotate: 45deg;
+}
+
+.chatting-page__main {
   height: 100%;
   position: relative;
   display: flex;
   background-color: var(--white);
 }
 
-.chatting_page__sidebar {
-  flex: 0 0 100px;
+.chatting-page__sidebar {
+  flex: 0 0 80px;
   background-color: var(--green);
   display: block;
 }
 
-.chatting_page__rooms {
+.chatting-page__rooms {
   flex: 1 0 0;
-  gap: 1.3rem;
-  display: flex;
-  flex-direction: column;
+  display: block;
   border-right: 1px solid #eee;
 }
 
-.chatting_page__rooms__header {
-  flex: 0 0 100px;
-  padding: 0 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.chatting_page__rooms__header h1 {
-  font-size: 2.3rem;
-}
-
-.chatting_page__rooms__header button {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 3rem;
-}
-
-.chatting_page__search {
-  flex: 0 0 50px;
-  padding: 0 1rem;
-  margin-top: -0.8rem;
-}
-
-.chatting_page__pinned_chat:hover {
-  background-color: var(--white_v3);
-}
-
-.chatting_page__chats {
-  overflow-y: auto;
-  margin-top: -1rem;
-}
-
-.chatting_page__chats ::-webkit-scrollbar {
-  width: 15px;
-}
-
-.chatting_page__chats ::-webkit-scrollbar-thumb {
-  border: 4px solid rgba(0, 0, 0, 0);
-  background-clip: padding-box;
-  border-radius: 15px;
-  background-color: #aeaeae;
-}
-
-.chatting_page__room {
+.chatting-page__room {
   flex: 2 2 0;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.chatting_page__room_detail {
+.chatting-page__room_detail {
   display: block;
   flex: 1 2 0;
   overflow-y: auto;
 }
 
 @media screen and (max-width: 1200px) {
-  .chatting_page__room_detail {
+  .chatting-page__room_detail {
     display: none;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .chatting_page__sidebar {
+  .chatting-page__sidebar {
     flex: 0 0 60px;
   }
-  .chatting_page__rooms {
+  .chatting-page__rooms {
     flex: 2 5 0;
   }
-  .chatting_page__room {
+  .chatting-page__room {
     flex: 3 1 0;
   }
 }
 
 @media screen and (max-width: 760px) {
-  .chatting_page__rooms {
+  .chatting-page__rooms {
     display: none;
   }
 }

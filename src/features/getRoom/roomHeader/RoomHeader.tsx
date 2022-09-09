@@ -1,10 +1,18 @@
-import ImageUser from '../../../images/chat_user2.jpg';
-import './roomHeader.css';
+import { FC } from "react";
+import ImageUser from "../../../images/chat_user2.jpg";
+import "./roomHeader.css";
 
-const RoomHeader = () => {
+interface IProps {
+  setIsShowHiddenRooms: (value: boolean) => void;
+}
+
+const RoomHeader: FC<IProps> = ({ setIsShowHiddenRooms }) => {
   return (
     <div className="room-header">
-      <button className="room-header__drawer_btn">
+      <button
+        onClick={() => setIsShowHiddenRooms(true)}
+        className="room-header__drawer_btn"
+      >
         <i className="fas fa-bars"></i>
       </button>
       <div className="room-header__user">

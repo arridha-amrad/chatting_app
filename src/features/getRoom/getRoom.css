@@ -1,20 +1,17 @@
-.room {
+.chatting-page-room {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.room_header {
-  padding: 0 2rem;
+.chatting-page-room__header {
+  width: 100%;
   height: 100px;
-  display: flex;
-  gap: 1.3rem;
-  align-items: center;
-  justify-content: flex-start;
+  display: block;
 }
 
 /* ==================================================== */
-.room__body {
+.chatting-page-room__body {
   flex: 1;
   overflow-y: auto;
   display: flex;
@@ -23,18 +20,18 @@
   z-index: 10;
 }
 
-.room__time {
+.chatting-page-room__time {
   position: relative;
   margin: 1rem 2rem;
 }
 
-.room__time__divider {
+.chatting-page-room__time-divider {
   height: 2px;
   width: 100%;
   background-color: rgb(209, 209, 209);
 }
 
-.room__time p {
+.chatting-page-room__time p {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -47,7 +44,7 @@
   text-transform: uppercase;
 }
 
-.room__messages {
+.chatting-page-room__messages {
   display: flex;
   flex-direction: column;
   padding: 0 1.9rem;
@@ -55,7 +52,7 @@
 
 /* ==================================================== */
 
-.room__form {
+.chatting-page-room__form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,11 +61,11 @@
   z-index: 22;
 }
 
-.room__body ::-webkit-scrollbar {
+.chatting-page-room__body ::-webkit-scrollbar {
   width: 15px;
 }
 
-.room__body ::-webkit-scrollbar-thumb {
+.chatting-page-room__body ::-webkit-scrollbar-thumb {
   border: 4px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
   border-radius: 15px;
@@ -76,27 +73,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .get_chat .chat_header {
+  .chatting-page-room__header {
     height: 80px;
-  }
-  .get_chat .chat_header .avatar img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 3rem;
-  }
-  .get_chat .chat_header .user_info .username {
-    font-size: 1.2rem;
-  }
-  .get_chat .chat_header .user_info .last_seen {
-    font-size: 0.9rem;
-  }
-  .get_chat .chat_header .chat_via {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  .drawer_container {
-    display: block;
   }
 }

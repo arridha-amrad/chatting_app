@@ -1,24 +1,24 @@
-import { Logout } from '../../../features/features.export';
-import User from '../../../images/chat_user2.jpg';
-import './sidebar.style.css';
+import { Logout } from "../../../features/features.export";
+import User from "../../../images/chat_user2.jpg";
+import "./sidebar.style.css";
 
 const SideBar = () => {
   return (
-    <div className="sidebar">
-      <div className="avatar">
+    <div className="chatting-page-sidebar">
+      <div className="chatting-page-sidebar__avatar">
         <img src={User} alt="avatar" />
       </div>
-      <div className="main_menu">
-        <button className="sidebar_menu_button">
+      <div className="chatting-page-sidebar__menu">
+        <button className="chatting-page-sidebar__menu-button">
           <i className="fas fa-comment-dots"></i>
-          <div className="tooltip">Chats</div>
+          <div className="chatting-page-sidebar__tooltip">Chats</div>
         </button>
-        <button className="sidebar_menu_button">
+        <button className="chatting-page-sidebar__menu-button">
           <i className="fas fa-user"></i>
-          <div className="tooltip">Profile</div>
+          <div className="chatting-page-sidebar__tooltip">Profile</div>
         </button>
       </div>
-      <div className="other_menu">
+      <div className="chatting-page-sidebar__other-menu">
         <Logout />
       </div>
     </div>
