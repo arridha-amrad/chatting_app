@@ -21,13 +21,17 @@ const ChatInitDialog: FC<IProps> = ({ isOpen, closeDialog }) => {
   }, [searchKey]);
 
   return (
-    <div className={`${isOpen ? "show" : "hide"} chat_init_dialog`}>
-      <button onClick={closeDialog} className="close_btn">
+    <div
+      className={`${
+        isOpen ? "chat-init-dialog--show" : "chat-init-dialog--hide"
+      } chat-init-dialog`}
+    >
+      <button onClick={closeDialog} className="chat-init-dialog__close-btn">
         <i className="fa-solid fa-xmark"></i>
       </button>
-      <div className="content">
-        <div className="content_relative">
-          <div className="search_input">
+      <div className="chat-init-dialog__content">
+        <div className="chat-init-dialog__content-relative">
+          <div className="chat-init-dialog__search">
             <SearchInput
               name="search"
               value={searchKey}
@@ -35,7 +39,7 @@ const ChatInitDialog: FC<IProps> = ({ isOpen, closeDialog }) => {
             />
           </div>
           {isShowSearchResult ? (
-            <div className="search_result">
+            <div className="chat-init-dialog__search-result">
               <ChatItem type="notif" />
               <ChatItem type="notif" />
               <ChatItem type="notif" />
@@ -58,10 +62,10 @@ const ChatInitDialog: FC<IProps> = ({ isOpen, closeDialog }) => {
             </div>
           ) : (
             <>
-              <div className="divider">
+              <div className="chat-init-dialog__divider">
                 <p>Or</p>
               </div>
-              <button className="create_group_btn">
+              <button className="chat-init-dialog__btn-create-group">
                 <i className="fa-solid fa-user-group"></i>Create group
               </button>
             </>

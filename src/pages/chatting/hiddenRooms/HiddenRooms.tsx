@@ -21,7 +21,7 @@ const HiddenRooms: FC<IProps> = ({
     >
       <button
         onClick={setIsShowHiddenRooms}
-        className="hidden-rooms__close_btn"
+        className="hidden-rooms__close-btn"
       >
         <i className="fa-solid fa-xmark"></i>
       </button>

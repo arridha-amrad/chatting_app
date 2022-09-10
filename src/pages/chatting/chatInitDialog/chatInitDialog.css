@@ -1,4 +1,4 @@
-.chat_init_dialog {
+.chat-init-dialog {
   position: absolute;
   top: 0;
   right: 0;
@@ -8,22 +8,22 @@
   z-index: 70;
 }
 
-.hide {
+.chat-init-dialog--hide {
   display: none;
 }
 
-.show {
+.chat-init-dialog--show {
   display: block;
 }
 
-.chat_init_dialog .content {
+.chat-init-dialog__content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.chat_init_dialog .content .content_relative {
+.chat-init-dialog__content-relative {
   padding: 1rem 0;
   background-color: var(--white);
   border-radius: 1rem;
@@ -35,7 +35,7 @@
   gap: 1rem;
 }
 
-.chat_init_dialog .close_btn {
+.chat-init-dialog__close-btn {
   width: 3rem;
   height: 3rem;
   position: absolute;
@@ -45,22 +45,22 @@
   border-radius: 3rem;
 }
 
-.chat_init_dialog .close_btn:hover {
+.chat-init-dialog__close-btn:hover {
   background-color: var(--white);
 }
 
-.chat_init_dialog .close_btn i {
+.chat-init-dialog__close-btn i {
   font-size: 1.5rem;
   color: var(--black);
 }
 
-.content_relative .search_input {
+.chat-init-dialog__search {
   height: 50px;
   width: 100%;
   padding: 0 2rem;
 }
 
-.content_relative .create_group_btn {
+.chat-init-dialog__btn-create-group {
   align-self: center;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
@@ -68,17 +68,43 @@
   font-weight: 600;
   transition: all 0.2s ease;
 }
-.content_relative .create_group_btn:hover,
-.create_group_btn:focus {
+.chat-init-dialog__btn-create-group:hover,
+.chat-init-dialog__btn-create-group:focus {
   box-shadow: 0 0 0 4px var(--greenLight);
 }
 
-.content_relative .create_group_btn i {
+.chat-init-dialog__btn-create-group i {
   margin-right: 0.8rem;
 }
 
-.content_relative .search_result {
+.chat-init-dialog__search-result {
   max-height: 500px;
   overflow-y: auto;
   padding: 0 1rem;
+}
+
+.chat-init-dialog__divider {
+  width: 90%;
+  height: 2px;
+  background-color: var(--white_bg);
+  margin: 0 auto;
+}
+
+.chat-init-dialog__divider p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  padding: 0 2rem;
+  color: var(--gray);
+}
+
+@media screen and (max-width: 760px) {
+  .chat-init-dialog__content-relative {
+    width: 400px;
+  }
+  .chat-init-dialog__close-btn {
+    left: 50%;
+  }
 }

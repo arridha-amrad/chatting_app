@@ -22,7 +22,7 @@
   background-color: var(--white);
 }
 
-.hidden-rooms__close_btn {
+.hidden-rooms__close-btn {
   position: absolute;
   right: 3%;
   top: 3%;
@@ -31,7 +31,7 @@
   border-radius: 100%;
 }
 
-.hidden-rooms__close_btn i {
+.hidden-rooms__close-btn i {
   font-size: 1.3rem;
 }
 
