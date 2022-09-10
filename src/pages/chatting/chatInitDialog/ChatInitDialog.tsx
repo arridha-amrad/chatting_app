@@ -1,6 +1,6 @@
-import { FC, useEffect, useState } from "react";
-import { ChatItem, SearchInput } from "../../../components/components.export";
-import "./chatInitDialog.css";
+import { FC, useEffect, useState } from 'react';
+import { ChatItem, SearchInput } from '../../../components/components.export';
+import './chatInitDialog.css';
 
 interface IProps {
   isOpen: boolean;
@@ -8,12 +8,12 @@ interface IProps {
 }
 
 const ChatInitDialog: FC<IProps> = ({ isOpen, closeDialog }) => {
-  const [searchKey, setSearchKey] = useState("");
+  const [searchKey, setSearchKey] = useState('');
 
   const [isShowSearchResult, setIsShowSearchResult] = useState(false);
 
   useEffect(() => {
-    if (searchKey === "") {
+    if (searchKey === '') {
       setIsShowSearchResult(false);
     } else {
       setIsShowSearchResult(true);
@@ -23,7 +23,7 @@ const ChatInitDialog: FC<IProps> = ({ isOpen, closeDialog }) => {
   return (
     <div
       className={`${
-        isOpen ? "chat-init-dialog--show" : "chat-init-dialog--hide"
+        isOpen ? 'chat-init-dialog--show' : 'chat-init-dialog--hide'
       } chat-init-dialog`}
     >
       <button onClick={closeDialog} className="chat-init-dialog__close-btn">
@@ -40,25 +40,18 @@ const ChatInitDialog: FC<IProps> = ({ isOpen, closeDialog }) => {
           </div>
           {isShowSearchResult ? (
             <div className="chat-init-dialog__search-result">
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
-              <ChatItem type="notif" />
+              <div className="chat-init-dialog__result-item">
+                <ChatItem type="notif" />
+              </div>
+              <div className="chat-init-dialog__result-item">
+                <ChatItem type="notif" />
+              </div>
+              <div className="chat-init-dialog__result-item">
+                <ChatItem type="notif" />
+              </div>
+              <div className="chat-init-dialog__result-item">
+                <ChatItem type="notif" />
+              </div>
             </div>
           ) : (
             <>
