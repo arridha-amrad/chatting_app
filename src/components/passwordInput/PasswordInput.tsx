@@ -1,6 +1,6 @@
-import { ChangeEventHandler, FC, useState } from "react";
-import { Link } from "react-router-dom";
-import "./passwordInput.style.css";
+import { ChangeEventHandler, FC, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './passwordInput.style.css';
 
 interface IProps {
   name: string;
@@ -32,7 +32,7 @@ const PasswordInput: FC<IProps> = ({
         name={name}
         value={value}
         onChange={onChange}
-        type={isShowPassword ? "text" : "password"}
+        type={isShowPassword ? 'text' : 'password'}
         className="text_input"
       />
       <div className="show_password_container">

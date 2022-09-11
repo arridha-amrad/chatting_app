@@ -9,9 +9,7 @@ interface IProps {
 
 const ChatInitDialog: FC<IProps> = ({ isOpen, closeDialog }) => {
   const [searchKey, setSearchKey] = useState('');
-
   const [isShowSearchResult, setIsShowSearchResult] = useState(false);
-
   useEffect(() => {
     if (searchKey === '') {
       setIsShowSearchResult(false);
@@ -19,7 +17,6 @@ const ChatInitDialog: FC<IProps> = ({ isOpen, closeDialog }) => {
       setIsShowSearchResult(true);
     }
   }, [searchKey]);
-
   return (
     <div
       className={`${

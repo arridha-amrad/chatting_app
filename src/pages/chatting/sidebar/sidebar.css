@@ -54,12 +54,15 @@
   font-weight: 600;
   border-radius: 0.5rem;
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.5s ease;
 }
 
 @media screen and (max-width: 1000px) {
   .chatting-page-sidebar {
     flex: 0 0 60px;
+  }
+  .chatting-page-sidebar__tooltip {
+    bottom: -50%;
   }
   .chatting-page-sidebar__avatar img {
     width: 2rem;

@@ -11,7 +11,7 @@ const ChatItem: FC<IProps> = ({ type }) => {
     <div className="chat-item">
       <div className="chat-item__user">
         <div className="chat-item__avatar">
-          <img src={Avatar1} alt="avatar" />
+          <img className="chat-item__img-avatar" src={Avatar1} alt="avatar" />
         </div>
         <div className="chat-item__info">
           <h4 className="chat-item__username">Susan Doe</h4>
@@ -23,15 +23,13 @@ const ChatItem: FC<IProps> = ({ type }) => {
         </div>
       </div>
       <div className="chat-item__moment">
-        <div className="time">14.30</div>
-        <div className="chat_info">
-          {type === 'read' && (
-            <i className="fas fa-check message_read_indicator"></i>
-          )}
+        <div className="chat-item__time">14.30</div>
+        <div className="chat-item__info">
+          {type === 'read' && <i className="fas fa-check chat-item__read"></i>}
           {type === 'unread' && (
-            <i className="fas fa-check message_unread_indicator"></i>
+            <i className="fas fa-check chat-item__unread"></i>
           )}
-          {type === 'notif' && <div className="chat_balloon">2</div>}
+          {type === 'notif' && <div className="chat-item__balloon">2</div>}
         </div>
       </div>
     </div>

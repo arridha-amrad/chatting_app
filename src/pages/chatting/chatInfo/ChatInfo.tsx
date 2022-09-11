@@ -1,12 +1,12 @@
-import "./chatInfo.css";
-import ChatUser from "../../../images/chat_user2.jpg";
+import './chatInfo.css';
+import ChatUser from '../../../images/chat_user2.jpg';
 // images
-import Image1 from "../../../images/bg_forgotPassword.jpg";
-import Image2 from "../../../images/bg_login.jpg";
-import Image3 from "../../../images/bg_signup.jpg";
-import Image4 from "../../../images/bg.jpg";
-import Image5 from "../../../images/main_ui.png";
-import Tag from "../../../components/tag/Tag";
+import Image1 from '../../../images/bg_forgotPassword.jpg';
+import Image2 from '../../../images/bg_login.jpg';
+import Image3 from '../../../images/bg_signup.jpg';
+import Image4 from '../../../images/bg.jpg';
+import Image5 from '../../../images/main_ui.png';
+import Tag from '../../../components/tag/Tag';
 
 const ChatInfo = () => {
   const images = [Image1, Image2, Image3, Image4, Image5];

@@ -1,5 +1,5 @@
-import "./messageCard.style.css";
-import ChatUser from "../../images/chat_user1.jpg";
+import './messageCard.style.css';
+import ChatUser from '../../images/chat_user1.jpg';
 
 const MessageCardForMe = () => {
   return (

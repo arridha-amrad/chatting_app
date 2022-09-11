@@ -1,6 +1,6 @@
-import { Logout } from "../../../features/features.export";
-import User from "../../../images/chat_user2.jpg";
-import "./sidebar.style.css";
+import { Logout } from '../../../features/features.export';
+import User from '../../../images/chat_user2.jpg';
+import './sidebar.css';
 
 const SideBar = () => {
   return (
