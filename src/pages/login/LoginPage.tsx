@@ -1,7 +1,8 @@
-import "./loginPage.css";
-import BgLogin from "../../images/bg_login.jpg";
-import { LoginForm } from "../../features/features.export";
-import { useNavigate } from "react-router-dom";
+import './loginPage.css';
+import BgLogin from '../../images/bg_login.jpg';
+import { LoginForm } from '../../features/features.export';
+import { useNavigate } from 'react-router-dom';
+import GoogleIcon from '../../icons/googleIcon';
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ const LoginPage = () => {
     <section id="login-page">
       <div className="login-page__content">
         <nav className="login-page__navbar">
-          <button onClick={() => navigate("/signup")} className="btn_primary">
+          <button onClick={() => navigate('/signup')} className="btn_primary">
             Sign Up
           </button>
         </nav>
@@ -18,7 +19,7 @@ const LoginPage = () => {
             <h1 className="login-page__form-title">Sign In to Messenger</h1>
             <button className="btn-google">
               <div className="btn-google__icon">
-                <i className="fa-brands fa-google"></i>
+                <GoogleIcon />
               </div>
               <p className="btn-google__title">Login with Google</p>
             </button>

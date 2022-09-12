@@ -6,6 +6,7 @@ import {
   SignUpPage,
 } from './pages/pages.export';
 import './App.css';
+import GoogleIcon from './icons/googleIcon';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+      <Route path="/test" element={<GoogleIcon />} />
     </Routes>
   );
 };

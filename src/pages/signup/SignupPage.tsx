@@ -1,7 +1,8 @@
-import "./signupPage.css";
-import BgSignup from "../../images/bg.jpg";
-import { useNavigate } from "react-router-dom";
-import SignUpForm from "../../features/signup/SignupFeatures";
+import './signupPage.css';
+import BgSignup from '../../images/bg.jpg';
+import { useNavigate } from 'react-router-dom';
+import SignUpForm from '../../features/signup/SignupFeatures';
+import GoogleIcon from '../../icons/googleIcon';
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const SignUp = () => {
         </div>
         <div className="signup-page__content">
           <nav className="signup-page__navbar">
-            <button onClick={() => navigate("/login")} className="btn_primary">
+            <button onClick={() => navigate('/login')} className="btn_primary">
               Login
             </button>
           </nav>
@@ -22,7 +23,7 @@ const SignUp = () => {
               <h1 className="signup-page__form-title">Sign Up to Messenger</h1>
               <button className="btn-google">
                 <div className="btn-google__icon">
-                  <i className="fa-brands fa-google"></i>
+                  <GoogleIcon />
                 </div>
                 <p className="btn-google__title">Login with Google</p>
               </button>
