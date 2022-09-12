@@ -1,7 +1,6 @@
-import PasswordInput from "../../components/passwordInput/PasswordInput";
-import TextInput from "../../components/TextInput";
+import { PasswordInput, TextInput } from "../../components/components.export";
 import useForm from "../../hooks/useForm";
-import "../features.shared.style.css";
+import "./loginForm.css";
 
 interface ILoginState {
   identity: string;
@@ -15,7 +14,7 @@ const LoginForm = () => {
   });
 
   return (
-    <form className="flex_form" onSubmit={onSubmit}>
+    <form className="login-form" onSubmit={onSubmit}>
       <TextInput
         label="Username or Email"
         value={state.identity}

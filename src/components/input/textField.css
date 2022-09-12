@@ -1,0 +1,46 @@
+.password-field,
+.text-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.text-field__label,
+.password-field__label {
+  font-weight: bold;
+}
+
+.text-field__input,
+.password-field__input {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--white_v3);
+  border: none;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  font-size: large;
+}
+
+.password-field__label-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.password-field__checkbox {
+  height: 1.3rem;
+  width: 1.3rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  accent-color: var(--greenDark);
+  outline: none;
+  border: 1px solid #eee;
+}
+
+.password-field__show-password {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}

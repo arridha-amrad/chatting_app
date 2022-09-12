@@ -1,20 +1,22 @@
 import { Link } from "react-router-dom";
 import { ForgotPasswordForm } from "../../features/features.export";
-import "./forgotPassword.style.css";
+import "./forgotPassword.css";
 
 const ForgotPasswordPage = () => {
   return (
-    <section id="forgot_password_page">
+    <section id="forgot-password-page">
       <main>
-        <div className="form">
-          <h1>Reset Password Request</h1>
+        <div className="forgot-password-page__form">
+          <h1 className="forgot-password-page__form-title">
+            Reset Password Request
+          </h1>
           <ForgotPasswordForm />
-          <Link to="/login" className="link">
+          <Link to="/login" className="forgot-password-page__link dom-link">
             Back to login
           </Link>
         </div>
       </main>
-      <footer>
+      <footer className="forgot-password-page__footer">
         <p>
           Created by <span>Arridha Amrad</span>
         </p>

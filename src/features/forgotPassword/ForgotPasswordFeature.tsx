@@ -1,11 +1,11 @@
 import { TextInput } from "../../components/components.export";
 import useForm from "../../hooks/useForm";
-import "../features.shared.style.css";
+import "./forgotPasswordFeature.css";
 
 const ForgotPasswordForm = () => {
   const { onChange, onSubmit, state } = useForm({ email: "" });
   return (
-    <form onSubmit={onSubmit} className="flex_form">
+    <form onSubmit={onSubmit} className="forgot-password-form">
       <TextInput
         label="Email Address"
         name="email"

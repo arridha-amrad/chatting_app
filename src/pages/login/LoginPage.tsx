@@ -1,38 +1,38 @@
-import './loginPage.style.css';
-import BgLogin from '../../images/bg_login.jpg';
-import { LoginForm } from '../../features/features.export';
-import { useNavigate } from 'react-router-dom';
+import "./loginPage.css";
+import BgLogin from "../../images/bg_login.jpg";
+import { LoginForm } from "../../features/features.export";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const navigate = useNavigate();
   return (
-    <section id="login_page">
-      <div className="content">
-        <nav>
-          <button onClick={() => navigate('/signup')} className="btn_primary">
+    <section id="login-page">
+      <div className="login-page__content">
+        <nav className="login-page__navbar">
+          <button onClick={() => navigate("/signup")} className="btn_primary">
             Sign Up
           </button>
         </nav>
-        <div className="signup_form_container">
-          <div className="signup_form">
-            <h1>Sign In to Messenger</h1>
-            <button className="btn_google">
-              <div className="icon_container">
+        <div className="login-page__form-container">
+          <div className="login-page__form">
+            <h1 className="login-page__form-title">Sign In to Messenger</h1>
+            <button className="btn-google">
+              <div className="btn-google__icon">
                 <i className="fa-brands fa-google"></i>
               </div>
-              <p>Login with Google</p>
+              <p className="btn-google__title">Login with Google</p>
             </button>
-            <div className="divider">
+            <div className="login-page__form-divider">
               <p>OR</p>
             </div>
             <LoginForm />
           </div>
         </div>
       </div>
-      <div className="sidebar">
-        <img src={BgLogin} alt="bg-login" />
+      <div className="login-page__sidebar">
+        <img className="login-page__image" src={BgLogin} alt="bg-login" />
       </div>
-      <footer>
+      <footer className="login-page__footer">
         <p>
           Created by <span>Arridha Amrad</span>
         </p>

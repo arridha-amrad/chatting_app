@@ -1,5 +1,5 @@
 import { ChangeEvent, FC } from "react";
-import "./searchInput.style.css";
+import "./searchInput.css";
 
 interface IProps {
   name: string;

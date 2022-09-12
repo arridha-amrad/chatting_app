@@ -1,4 +1,5 @@
 import { ChangeEventHandler, FC } from "react";
+import "./textField.css";
 
 interface IProps {
   name: string;
@@ -7,18 +8,18 @@ interface IProps {
   onChange: ChangeEventHandler;
 }
 
-const TextInput: FC<IProps> = ({ label, name, onChange, value }) => {
+const TextField: FC<IProps> = ({ label, name, onChange, value }) => {
   return (
-    <div className="input_wrapper">
-      <label>{label}</label>
+    <div className="text-field">
+      <label className="text-field__label">{label}</label>
       <input
         name={name}
         value={value}
         onChange={onChange}
-        className="text_input"
+        className="text-field__input"
       />
     </div>
   );
 };
 
-export default TextInput;
+export default TextField;

@@ -1,6 +1,6 @@
-import { ChangeEventHandler, FC, useState } from 'react';
-import { Link } from 'react-router-dom';
-import './passwordInput.style.css';
+import { ChangeEventHandler, FC, useState } from "react";
+import { Link } from "react-router-dom";
+import "./textField.css";
 
 interface IProps {
   name: string;
@@ -19,11 +19,11 @@ const PasswordInput: FC<IProps> = ({
 }) => {
   const [isShowPassword, setIsShowPassword] = useState(false);
   return (
-    <div className="input_wrapper">
-      <div className="password_label_container">
-        <label>{label}</label>
+    <div className="password-field">
+      <div className="password-field__label-container">
+        <label className="password-field__label">{label}</label>
         {isWithForgotPassword && (
-          <Link className="link" to="/forgot-password">
+          <Link className="dom-link" to="/forgot-password">
             Forgot Password
           </Link>
         )}
@@ -32,17 +32,19 @@ const PasswordInput: FC<IProps> = ({
         name={name}
         value={value}
         onChange={onChange}
-        type={isShowPassword ? 'text' : 'password'}
-        className="text_input"
+        type={isShowPassword ? "text" : "password"}
+        className="password-field__input"
       />
-      <div className="show_password_container">
+      <div className="password-field__show-password">
         <input
           checked={isShowPassword}
           onChange={(_) => setIsShowPassword(!isShowPassword)}
-          className="check_input"
+          className="password-field__checkbox"
           type="checkbox"
         />
-        <label>Show Password</label>
+        <label className="password-field__show-password__label">
+          Show Password
+        </label>
       </div>
     </div>
   );

@@ -1,16 +1,16 @@
-.create_new_chat {
+.create-new-chat {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
 }
 
-.create_new_chat h1 {
+.create-new-chat__title {
   font-weight: bold;
   font-size: 2.2rem;
 }
 
-.create_new_chat .btn_menu {
+.create-new-chat__btn-menu {
   height: 2.5rem;
   width: 2.5rem;
   border-radius: 2.5rem;
@@ -18,26 +18,16 @@
   background-color: var(--white_bg);
 }
 
-.create_new_chat .btn_menu:hover {
+.create-new-chat__btn-menu:hover {
   background-color: var(--white);
   border: 1px solid var(--white_bg);
 }
 
-.create_new_chat .btn_menu:hover > i {
+.create-new-chat__btn-menu:hover > i {
   color: var(--green);
 }
 
-.create_new_chat .btn_menu i {
+.create-new-chat__btn-menu i {
   font-size: 1.1rem;
   color: var(--gray);
 }
-
-/* .start_chat_overlay {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-} */

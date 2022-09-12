@@ -1,7 +1,6 @@
 import { PasswordInput, TextInput } from "../../components/components.export";
 import useForm from "../../hooks/useForm";
-import "./signupFeatures.style.css";
-import "../features.shared.style.css";
+import "./signupFeatures.css";
 
 interface ISignUpState {
   firstName: string;
@@ -21,9 +20,9 @@ const SignUpForm = () => {
   const { email, firstName, lastName, password } = state;
 
   return (
-    <form onSubmit={onSubmit} className="flex_form">
-      <div className="name_container">
-        <div className="first_name_container">
+    <form onSubmit={onSubmit} className="signup-form">
+      <div className="signup-form__name">
+        <div className="signup-form__firstname">
           <TextInput
             label="First Name"
             name="firstName"
@@ -31,7 +30,7 @@ const SignUpForm = () => {
             onChange={onChange}
           />
         </div>
-        <div className="last_name_container">
+        <div className="signup-form__lastname">
           <TextInput
             label="Last Name"
             name="lastName"

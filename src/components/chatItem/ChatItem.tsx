@@ -1,9 +1,9 @@
-import { FC } from 'react';
-import Avatar1 from '../../images/chat_user1.jpg';
-import './chatItem.css';
+import { FC } from "react";
+import Avatar1 from "../../images/chat_user1.jpg";
+import "./chatItem.css";
 
 interface IProps {
-  type: 'read' | 'unread' | 'notif' | 'typing';
+  type: "read" | "unread" | "notif" | "typing";
 }
 
 const ChatItem: FC<IProps> = ({ type }) => {
@@ -15,7 +15,7 @@ const ChatItem: FC<IProps> = ({ type }) => {
         </div>
         <div className="chat-item__info">
           <h4 className="chat-item__username">Susan Doe</h4>
-          {type === 'typing' ? (
+          {type === "typing" ? (
             <div className="chat-item__typing">Typing...</div>
           ) : (
             <div className="chat-item__message">Hello World</div>
@@ -25,11 +25,11 @@ const ChatItem: FC<IProps> = ({ type }) => {
       <div className="chat-item__moment">
         <div className="chat-item__time">14.30</div>
         <div className="chat-item__info">
-          {type === 'read' && <i className="fas fa-check chat-item__read"></i>}
-          {type === 'unread' && (
+          {type === "read" && <i className="fas fa-check chat-item__read"></i>}
+          {type === "unread" && (
             <i className="fas fa-check chat-item__unread"></i>
           )}
-          {type === 'notif' && <div className="chat-item__balloon">2</div>}
+          {type === "notif" && <div className="chat-item__balloon">2</div>}
         </div>
       </div>
     </div>

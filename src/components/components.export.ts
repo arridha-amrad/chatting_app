@@ -1,5 +1,5 @@
-export { default as PasswordInput } from "./passwordInput/PasswordInput";
-export { default as TextInput } from "./TextInput";
+export { default as PasswordInput } from "./input/PasswordField";
+export { default as TextInput } from "./input/TextField";
 export { default as SearchInput } from "./searchInput/SearchInput";
 export { default as ChatItem } from "./chatItem/ChatItem";
 export { default as MessageCardForOthers } from "./messageCard/MessageCardForOthers";

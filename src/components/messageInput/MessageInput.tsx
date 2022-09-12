@@ -1,4 +1,4 @@
-import "./messageInput.style.css";
+import "./messageInput.css";
 
 const MessageInput = () => {
   return (

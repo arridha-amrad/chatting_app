@@ -1,4 +1,4 @@
-import "./signupPage.style.css";
+import "./signupPage.css";
 import BgSignup from "../../images/bg.jpg";
 import { useNavigate } from "react-router-dom";
 import SignUpForm from "../../features/signup/SignupFeatures";
@@ -6,27 +6,27 @@ import SignUpForm from "../../features/signup/SignupFeatures";
 const SignUp = () => {
   const navigate = useNavigate();
   return (
-    <section id="signup_page">
-      <main className="main">
-        <div className="sidebar">
-          <img className="background" src={BgSignup} alt="bg-signup" />
+    <section id="signup-page">
+      <main className="signup-page__main">
+        <div className="signup-page__sidebar">
+          <img className="signup-page__image" src={BgSignup} alt="bg-signup" />
         </div>
-        <div className="content">
-          <nav className="navbar">
+        <div className="signup-page__content">
+          <nav className="signup-page__navbar">
             <button onClick={() => navigate("/login")} className="btn_primary">
               Login
             </button>
           </nav>
-          <div className="signup_form_container">
-            <div className="signup_form">
-              <h1>Sign Up to Messenger</h1>
-              <button className="btn_google">
-                <div className="icon_container">
+          <div className="signup-page__form-container">
+            <div className="signup-page__form">
+              <h1 className="signup-page__form-title">Sign Up to Messenger</h1>
+              <button className="btn-google">
+                <div className="btn-google__icon">
                   <i className="fa-brands fa-google"></i>
                 </div>
-                <p>Login with Google</p>
+                <p className="btn-google__title">Login with Google</p>
               </button>
-              <div className="divider">
+              <div className="signup-page__form-divider">
                 <p>OR</p>
               </div>
               <SignUpForm />
@@ -34,7 +34,7 @@ const SignUp = () => {
           </div>
         </div>
       </main>
-      <footer className="footer">
+      <footer className="signup-page__footer">
         <p>
           Created by <span>Arridha Amrad</span>
         </p>
